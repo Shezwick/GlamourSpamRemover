@@ -1,5 +1,5 @@
 {
-    "Author": "Shezwick Tayuun",
+    "Author": "Shezwick",
     "Name": "Glamour Spam Remover",
     "Punchline": "What it says on the tin.",
     "Description": "No settings needed, just add and forget.\n\nLove linking plates to gearsets but hate all the chat spam when you swap? Here's your solution.",
@@ -9,9 +9,9 @@
         "glamour"
     ],
     "RepoUrl": "https://github.com/Shezwick/GlamourSpamRemover",
-    "IconUrl": "/images/icon.png",
+    "IconUrl": "https://github.com/Shezwick/GlamourSpamRemover/blob/master/Assets/icon.png",
     "ImageUrls": [
-        "/images/before.png",
-        "/images/after.png"
+        "https://github.com/Shezwick/GlamourSpamRemover/blob/master/Assets/image1.png",
+        "https://github.com/Shezwick/GlamourSpamRemover/blob/master/Assets/image2.png"
     ]
 }
