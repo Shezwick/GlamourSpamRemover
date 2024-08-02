@@ -4,16 +4,16 @@ using Dalamud.IoC;
 using Dalamud.Plugin;
 using Dalamud.Plugin.Services;
 
-namespace GlamourSpamBegone;
+namespace GlamourSpamRemover;
 
-public sealed class GlamourSpamBeGonePlugin : IDalamudPlugin
+public sealed class GlamourSpamRemoverPlugin : IDalamudPlugin
 {
     [PluginService] internal static ICommandManager CommandManager { get; private set; } = null!;
     [PluginService] internal static IChatGui ChatGui { get; private set; } = null!;
 
     private const ushort GlamourCastMessageId = 2105;
 
-    public GlamourSpamBeGonePlugin()
+    public GlamourSpamRemoverPlugin()
     {
         ChatGui.ChatMessage += OnChatMessageDelegate;
     }
