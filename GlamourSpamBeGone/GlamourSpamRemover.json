@@ -8,5 +8,10 @@
         "chat",
         "glamour"
     ],
-    "RepoUrl": "https://github.com/Shezwick/GlamourSpamRemover"
+    "RepoUrl": "https://github.com/Shezwick/GlamourSpamRemover",
+    "IconUrl": "/images/icon.png",
+    "ImageUrls": [
+        "/images/before.png",
+        "/images/after.png"
+    ]
 }
