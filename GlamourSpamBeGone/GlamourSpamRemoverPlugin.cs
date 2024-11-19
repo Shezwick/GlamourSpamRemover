@@ -14,7 +14,7 @@ public sealed class GlamourSpamRemoverPlugin : IDalamudPlugin
     [PluginService] internal static IChatGui ChatGui { get; private set; } = null!;
 
     private const ushort GlamourCastMessageId = 2105;
-    private static readonly List<string> glamourMessages =
+    private static readonly List<string> GlamourMessages =
     [
         "You cast a glamour.",              // EN
         "Glamours projected from plate ",   // EN
@@ -42,7 +42,7 @@ public sealed class GlamourSpamRemoverPlugin : IDalamudPlugin
             var messageText = message.TextValue;
 
             //Note: Test if there are any other messages using this chat id. If not, can drop the language checks and just remove always
-            if (glamourMessages.Any(glamourMessage => messageText.Contains(glamourMessage)))
+            if (GlamourMessages.Any(glamourMessage => messageText.Contains(glamourMessage)))
             {
                 isHandled = true;
             }
