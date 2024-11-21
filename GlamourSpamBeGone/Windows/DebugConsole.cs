@@ -43,7 +43,7 @@ namespace GlamourSpamRemover.Windows
 
             foreach (var message in GlamourSpamRemoverPlugin.DetectedGlamourMessages)
             {
-                ImGui.Text(message);
+                ImGui.TextUnformatted(message); //Always use this to avoid crashes from user text
             }
             ImGui.EndChildFrame();
         }
