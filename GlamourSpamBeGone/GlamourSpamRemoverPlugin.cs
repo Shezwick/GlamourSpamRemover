@@ -48,8 +48,6 @@ public sealed class GlamourSpamRemoverPlugin : IDalamudPlugin
         });
 
         PluginInterface.UiBuilder.Draw += DrawUI;
-
-        ToggleDebugConsole();
     }
 
     public void Dispose()
