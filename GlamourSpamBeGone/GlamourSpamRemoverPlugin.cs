@@ -8,6 +8,7 @@ using Dalamud.Plugin.Services;
 using GlamourSpamRemover.Windows;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace GlamourSpamRemover;
 
@@ -25,11 +26,11 @@ public sealed class GlamourSpamRemoverPlugin : IDalamudPlugin
     private const ushort GlamourCastMessageId = 2105;
     private static readonly List<string> GlamourMessages =
     [
-        "You cast a glamour.",              // EN
+        "(cast|casts) a glamour\\.",        // EN
         "Glamours projected from plate ",   // EN
-        "Vous projetez un mirage.",         // FR
+        "(projetez|projette) un mirage\\.", // FR
         "Vous vous équipez de la tenue ",   // FR
-        "Du projizierst ein",               // DE
+        "(projizierst|projiziert) ein",     // DE
         "Die Projektionsplatte ",           // DE
         "選択したポートレート",                // JP
         "の外見を武具投影した"                 // JP
@@ -61,7 +62,7 @@ public sealed class GlamourSpamRemoverPlugin : IDalamudPlugin
     {
         var messageText = message.TextValue;
         var hasGlamourMessageId = (ushort)type == GlamourCastMessageId;
-        var isAGlamoutMessage = GlamourMessages.Any(glamourMessage => messageText.Contains(glamourMessage));
+        var isAGlamoutMessage = GlamourMessages.Any(glamourMessage => Regex.IsMatch(messageText, glamourMessage));
 
         //Note: Other system messages use the same id (like retainer ventures), need both checks
         if (hasGlamourMessageId && isAGlamoutMessage)
