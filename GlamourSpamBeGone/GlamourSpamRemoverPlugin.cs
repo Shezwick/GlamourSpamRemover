@@ -35,7 +35,9 @@ public sealed class GlamourSpamRemoverPlugin : IDalamudPlugin
         "選択したポートレート",                // JP
         "の外見を武具投影した",                // JP
         "외관을 투영했습니다\\.",              // KR
-        "환영을 장비에 투영했습니다\\."         // KR
+        "환영을 장비에 투영했습니다\\.",        // KR
+        "的外型投影到了",                     // CN
+        "已使用投影模板"                      // CN
     ];
 
     public GlamourSpamRemoverPlugin()
